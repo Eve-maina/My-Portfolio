@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eve Maina | Cloud Engineer</title>
+  <meta name="description" content="Eve Maina, cloud engineer. Secure AWS architecture, least privilege IAM, Terraform, serverless and AI agents.">
+  <meta name="theme-color" content="#050814">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=20261105f">
+  <script src="js/main.js?v=20261105f" defer></script>
+  <script src="js/terminal.js?v=20261105f" defer></script>
+  <script src="js/station.js?v=20261105f" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#whoami">
+        <span class="brand-text">Eve Maina</span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#whoami" data-section="whoami">whoami</a></li>
+          <li><a href="#skills" data-section="skills">skills</a></li>
+          <li><a href="#projects" data-section="projects">projects</a></li>
+          <li>
+            <a href="https://medium.com/@eve.maina" target="_blank" rel="noopener noreferrer">
+              Medium
+              <svg class="icon icon-xs" aria-hidden="true"><use href="assets/icons.svg#external"></use></svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Eve-maina" target="_blank" rel="noopener noreferrer">
+              GitHub
+              <svg class="icon icon-xs" aria-hidden="true"><use href="assets/icons.svg#external"></use></svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/eve-maina/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+              <svg class="icon icon-xs" aria-hidden="true"><use href="assets/icons.svg#external"></use></svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <button class="btn-launch" id="launch-mission" type="button" aria-haspopup="dialog" aria-controls="station">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#rocket"></use></svg>
+              Launch Mission
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-controls">
+        <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false">
+          <span class="motion-switch" aria-hidden="true"></span>
+          Reduce motion
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ whoami ============ -->
+    <section id="whoami" class="section hero" aria-labelledby="whoami-title">
+      <!-- James Webb Space Telescope photo of the Cosmic Cliffs behind the intro -->
+      <div class="hero-photo" aria-hidden="true">
+        <img src="assets/photos/nebula.jpg" alt="" width="2560" height="1482" fetchpriority="high" decoding="async">
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="prompt" aria-hidden="true">$</span> whoami</p>
+          <h1 id="whoami-title" class="hero-name">Eve Maina</h1>
+          <p class="hero-role">Cloud Engineer</p>
+          <!-- TODO: confirm your one-line intro -->
+          <p class="hero-intro">I architect and build secure cloud systems.</p>
+
+          <div class="glass about">
+            <p class="about-hello">Hey there, welcome to my world!</p>
+            <p>
+              I’m a cloud engineer who loves building in the cloud. To me, the cloud is a lot like
+              space: vast, always expanding, and full of possibility, but it only works when every system is
+              designed to survive the unknown. That’s why I build with security in mind from the first line,
+              whether I’m designing infrastructure, setting up access, or shipping something new. I enjoy
+              making cloud systems that are scalable, resilient, and hard to break.
+            </p>
+            <p>
+              I’m also fascinated by space itself, and by the idea that we might not be alone out there. If
+              life exists beyond Earth, I like to think it’s also out there asking the same big questions we
+              are. That same curiosity pulls me toward the frontier of tech, including AI and agentic systems,
+              where software can plan and act on its own and security matters more than ever.
+            </p>
+            <p>
+              When I’m not exploring the cloud, I’m exploring the real world. I love hiking and adventure,
+              from new trails to new places, and I’m usually halfway through a good book, because stories and
+              big ideas keep me curious.
+            </p>
+            <p class="about-signoff">So pull up a seat, look around, and explore. Mission control is open.</p>
+          </div>
+        </div>
+
+        <figure class="glass terminal hero-terminal" aria-label="Decorative terminal showing an identity check">
+          <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+          <pre class="terminal-body"><code><span class="t-prompt">$</span> aws sts get-caller-identity
+{
+  <span class="t-key">"UserId"</span>: <span class="t-val">"EVE-MAINA"</span>,
+  <span class="t-key">"Role"</span>: <span class="t-val">"CloudEngineer"</span>,
+  <span class="t-key">"Arn"</span>: <span class="t-val">"arn:aws:iam::eve:role/secure-by-default"</span>
+}
+<span class="t-prompt">$</span> <span class="t-cursor" aria-hidden="true"></span></code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ skills ============ -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow"><span class="prompt" aria-hidden="true">$</span> ls ./skills</p>
+          <h2 id="skills-title">skills</h2>
+        </header>
+      </div>
+
+      <!-- Mission control status board: every skill visible at once -->
+      <div class="sysboard">
+        <div class="sys-photo" aria-hidden="true"><img src="assets/photos/earth.jpg" alt="" width="1920" height="1278" loading="lazy" decoding="async"></div>
+        <div class="container">
+          <div class="sys-panel" id="sys-panel">
+            <span class="hud-corner hud-tl" aria-hidden="true"></span>
+            <span class="hud-corner hud-tr" aria-hidden="true"></span>
+            <span class="hud-corner hud-bl" aria-hidden="true"></span>
+            <span class="hud-corner hud-br" aria-hidden="true"></span>
+            <div class="sys-head" aria-hidden="true">
+              <span class="sys-title">SYSTEMS CHECK // EVE-MAINA</span>
+              <span class="sys-count"><span id="sys-online">10</span>/10 ONLINE</span>
+            </div>
+            <ul class="sys-grid skill-names" aria-label="Skills">
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">AWS</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Python</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Terraform</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Docker</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Git</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">GitHub</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Networking</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Linux</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Agentic AI</span></li>
+          <li class="sys-item"><span class="sys-light" aria-hidden="true"></span><span class="sys-name">Technical writing</span></li>
+            </ul>
+            <p class="sys-foot"><span class="sys-foot-label">All systems:</span> <strong>GO</strong> <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ projects ============ -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow"><span class="prompt" aria-hidden="true">$</span> ls ./projects</p>
+          <h2 id="projects-title">projects</h2>
+          <p class="section-sub">Flip a card for the problem, the build and the outcome.</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-chip" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter-chip" type="button" data-filter="Cloud" aria-pressed="false">Cloud</button>
+          <button class="filter-chip" type="button" data-filter="Security" aria-pressed="false">Security</button>
+          <button class="filter-chip" type="button" data-filter="AI" aria-pressed="false">AI</button>
+          <button class="filter-chip" type="button" data-filter="Community" aria-pressed="false">Community</button>
+        </div>
+        <p class="sr-only" id="filter-status" aria-live="polite"></p>
+
+        <div class="project-grid" id="project-grid">
+          <noscript>
+            <p class="glass noscript-note">
+              Turn on JavaScript to see the project cards, or browse my work on
+              <a href="https://github.com/Eve-maina">GitHub</a>.
+            </p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ contact ============ -->
+  <footer id="contact" class="section footer" aria-labelledby="contact-title">
+    <div class="footer-photo" aria-hidden="true">
+      <img src="assets/photos/earth-night.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async">
+    </div>
+    <div class="container">
+      <div class="glass contact-card">
+        <h2 id="contact-title">my socials</h2>
+        <p class="section-sub">Ping me at:</p>
+        <ul class="contact-links">
+          <li>
+            <a class="contact-link" href="https://www.linkedin.com/in/eve-maina/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"></use></svg>
+              LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://github.com/Eve-maina" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#github"></use></svg>
+              GitHub<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://medium.com/@eve.maina" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#medium"></use></svg>
+              Medium<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright">&copy; <span id="year">2026</span> Eve Maina</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Mini terminal, bottom right ============ -->
+  <div class="term-widget" id="term-widget">
+    <section class="term-panel" id="term-panel" aria-labelledby="term-title" hidden>
+      <div class="term-head">
+        <div class="term-lights">
+          <button class="term-light term-light-close" id="term-close" type="button" aria-label="Close terminal"></button>
+          <span class="term-light term-light-min" aria-hidden="true"></span>
+          <span class="term-light term-light-max" aria-hidden="true"></span>
+        </div>
+        <h2 class="term-title" id="term-title">eve@portfolio: ~ (zsh)</h2>
+      </div>
+      <!-- The whole screen is the terminal. Typing goes straight onto the prompt line. -->
+      <div class="term-screen" id="term-screen">
+        <div class="term-output" id="term-output" role="log" aria-live="polite" aria-label="Terminal output"></div>
+        <form class="term-form" id="term-form" autocomplete="off">
+          <label class="term-line term-prompt-line" for="term-input"><span class="p-user">eve@portfolio</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-sign">$</span><span class="term-typed" id="term-typed" aria-hidden="true"></span></label>
+          <input class="term-input" id="term-input" type="text" aria-label="Type a terminal command, then press Enter" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send">
+        </form>
+      </div>
+    </section>
+    <button class="term-launcher" id="term-launcher" type="button" aria-expanded="false" aria-controls="term-panel">
+      <span class="term-launcher-icon" aria-hidden="true">&gt;_</span>
+      <span class="term-launcher-text">Terminal</span>
+    </button>
+  </div>
+
+  <!-- ============ Creative feature: MISSION: SECURE THE STATION ============ -->
+  <div class="station" id="station" role="dialog" aria-modal="true" aria-labelledby="station-title" hidden>
+    <div class="station-bar">
+      <button class="btn btn-small btn-ghost station-back" id="station-close" type="button">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-left"></use></svg>
+        Back to portfolio
+      </button>
+      <div class="station-bar-right">
+        <button class="sound-toggle is-on" id="sound-toggle" type="button">
+          <span class="sound-icon" aria-hidden="true">&#128266;</span>
+          <span class="sound-label">Sound on</span>
+        </button>
+      <p class="breach-counter" id="breach-counter">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#shield"></use></svg>
+        <span>Breaches sealed <strong><span id="sealed-count">0</span>/5</strong></span>
+      </p>
+      </div>
+    </div>
+
+    <div class="station-scroll" id="station-scroll">
+      <div class="station-wrap">
+        <p class="eyebrow"><span class="prompt" aria-hidden="true">$</span> ./launch --mission</p>
+        <h2 class="station-title" id="station-title" tabindex="-1">Mission: Secure the Station</h2>
+
+        <ol class="levels" aria-label="Mission progress">
+          <li class="level" data-level="launch">
+            <span class="level-dot" aria-hidden="true"></span>
+            <span class="level-name">Launch Pad</span>
+            <span class="level-state">Reached</span>
+          </li>
+          <li class="level" data-level="orbit">
+            <span class="level-dot" aria-hidden="true"></span>
+            <span class="level-name">Orbit</span>
+            <span class="level-state">Seal 3 to unlock</span>
+          </li>
+          <li class="level" data-level="deep">
+            <span class="level-dot" aria-hidden="true"></span>
+            <span class="level-name">Deep Space</span>
+            <span class="level-state">Seal all 5 to unlock</span>
+          </li>
+        </ol>
+        <p class="sr-only" id="station-announcer" aria-live="polite"></p>
+
+        <!-- Intro -->
+        <section class="glass intro-card" id="station-intro" aria-labelledby="intro-title">
+          <div class="intro-animals" aria-hidden="true">
+            <img src="assets/photos/airlock.jpg" alt="" class="ph-airlock" width="640" height="426" loading="lazy">
+            <img src="assets/photos/spacewalk.jpg" alt="" class="ph-card" width="640" height="422" loading="lazy">
+            <img src="assets/photos/controls.jpg" alt="" class="ph-master" width="640" height="426" loading="lazy">
+            <img src="assets/photos/docking.jpg" alt="" class="ph-hatch" width="600" height="622" loading="lazy">
+            <img src="assets/photos/satellite.jpg" alt="" class="ph-satellite" width="640" height="426" loading="lazy">
+          </div>
+          <h3 id="intro-title">Security officer, report to the bridge</h3>
+          <p class="intro-text">You are the station's security officer. 5 breaches need sealing.</p>
+          <p class="intro-sub">Five systems on the station are open to attack, each one a classic AWS mistake. Find each breach, then fix it with your own hands: seal the airlock, lock away the secret, rewire the policy.</p>
+          <div class="intro-actions">
+            <button class="btn btn-primary" id="station-start" type="button">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#rocket"></use></svg>
+              Start mission
+            </button>
+            <button class="link-btn" id="station-skip" type="button">Skip to Deep Space</button>
+          </div>
+        </section>
+
+        <!-- Field: scene or list -->
+        <section class="station-field" id="station-field" aria-labelledby="field-title" hidden>
+          <div class="play-head">
+            <h3 id="field-title" tabindex="-1">Station status</h3>
+            <div class="view-toggle" role="group" aria-label="Choose how to view the breaches">
+              <button type="button" class="view-btn" data-view="map" aria-pressed="true">Station view</button>
+              <button type="button" class="view-btn" data-view="list" aria-pressed="false">List view</button>
+            </div>
+          </div>
+          <p class="field-hint" id="field-hint">Scan the station and tap a flashing breach to start its mission.</p>
+
+          <div class="scene" id="scene">
+            <img class="scene-photo" src="assets/photos/station.jpg" alt="The International Space Station in orbit above Earth" width="1920" height="1225" loading="lazy" decoding="async">
+            <div class="scene-hud" aria-hidden="true">
+              <span class="hud-corner hud-tl"></span>
+              <span class="hud-corner hud-tr"></span>
+              <span class="hud-corner hud-bl"></span>
+              <span class="hud-corner hud-br"></span>
+              <p class="scene-tag scene-tag-tl"><span class="rec-dot"></span> CAM-01 // ISS // ORBIT 408 KM</p>
+              <p class="scene-tag scene-tag-br" id="scene-status">5 OPEN BREACHES</p>
+            </div>
+            <div class="scope-lens" id="scope-lens" aria-hidden="true"></div>
+            <!-- Breach hotspots are added by station.js -->
+          </div>
+
+          <ol class="breach-list" id="breach-list" aria-label="Breaches" hidden></ol>
+        </section>
+
+        <!-- One mission at a time -->
+        <section class="glass mission" id="mission" aria-labelledby="mission-title" hidden></section>
+
+        <!-- Deep Space: unlocked after all 5 sealed -->
+        <section class="glass level-panel deep-panel" id="level-deep" aria-labelledby="deep-title" hidden>
+          <p class="level-kicker">Deep Space reached</p>
+          <h3 id="deep-title" tabindex="-1">Mission complete. The station is secure.</h3>
+          <section class="practices" aria-labelledby="practices-title">
+            <h4 id="practices-title">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#shield"></use></svg>
+              Best cloud security practices
+            </h4>
+            <p class="practices-sub">The security officer's handbook. Ten habits that would have stopped every breach on this station.</p>
+            <ol class="practice-list">
+              <li><strong>Least privilege for every identity.</strong> Grant only the actions and resources a role needs, and let IAM Access Analyzer trim the rest.</li>
+              <li><strong>MFA everywhere, root locked away.</strong> Every human signs in with a second factor. The root user gets a hardware key and is never used day to day.</li>
+              <li><strong>No long-lived access keys.</strong> Use IAM roles and IAM Identity Center so credentials are short-lived and rotate on their own.</li>
+              <li><strong>Secrets live in a vault.</strong> Store them in AWS Secrets Manager, read them at runtime and rotate them on a schedule.</li>
+              <li><strong>Block public access by default.</strong> Turn on S3 Block Public Access at the account level and open things up only on purpose.</li>
+              <li><strong>Encrypt at rest and in transit.</strong> Use AWS KMS for data at rest and TLS for everything on the wire.</li>
+              <li><strong>Log everything, centrally.</strong> An organization-wide CloudTrail trail into a locked down bucket, with CloudWatch alarms on what matters.</li>
+              <li><strong>Detect threats continuously.</strong> Enable GuardDuty and Security Hub so suspicious activity is flagged in minutes, not months.</li>
+              <li><strong>Infrastructure as code, reviewed.</strong> Every change goes through Terraform plans and code review, never through console clicks.</li>
+              <li><strong>Back up and practise recovery.</strong> Automate backups, keep copies in a separate account and test restores before you need them.</li>
+            </ol>
+          </section>
+
+          <a class="btn btn-primary mission-cta" href="https://www.linkedin.com/in/eve-maina/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"></use></svg>
+            Mission complete. Let's talk.
+            <span class="sr-only">(opens LinkedIn in a new tab)</span>
+          </a>
+        </section>
+
+        <p class="reset-row">
+          <button class="link-btn" id="station-reset" type="button">Reset mission</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
