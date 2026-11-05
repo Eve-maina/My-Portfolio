@@ -2,22 +2,6 @@
 
 My personal portfolio: a one-page, deep space themed site that introduces who I am, the skills I work with and the projects I have built, with an interactive cloud security mission hidden behind a single button.
 
-## Features
-
-### whoami
-My name and role, followed by an about card that tells my story: how the cloud reminds me of space, why I build with security in mind from the first line, my curiosity about life beyond Earth and about AI and agentic systems, and my love of hiking, adventure and good books. Next to it, a terminal card shows the output of `aws sts get-caller-identity`.
-
-### Skills
-A mission control status board over a real photo of Earth from orbit. All ten skills are visible at once as systems with a glowing status light: AWS, Python, Terraform, Docker, Git, GitHub, Networking, Linux, Agentic AI and Technical writing. When the board scrolls into view, the lights run a quick systems check, come online one by one and finish on **ALL SYSTEMS: GO**.
-
-### Projects
-Flip cards with category filters (All, Cloud, Security, AI, Community). The front shows the project and its tech, with the GitHub link always one click away. The back explains the problem, what I built and the outcome.
-
-### My socials
-Links to my LinkedIn, GitHub and Medium.
-
-### Mini terminal
-A **Terminal** button in the bottom right corner opens a small, real looking shell. Visitors type straight onto the prompt line and can run `help`, `whoami`, `skills` and `projects`, with command history, Tab autocomplete and a surprise for anyone who tries `sudo`.
 
 ### The creative feature: Mission: Secure the Station
 The glowing **Launch Mission** button in the nav plays a real NASA Space Shuttle liftoff, gives the page a short rumble and opens a round viewport onto the mission.
