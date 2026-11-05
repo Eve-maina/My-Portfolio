@@ -2,11 +2,13 @@
 
 A one-page, deep space themed portfolio built with plain HTML, CSS and vanilla JavaScript. There is no framework and no build step, so the repository deploys to AWS Amplify Hosting as it is.
 
+Repository: [github.com/Eve-maina/My-Portfolio](https://github.com/Eve-maina/My-Portfolio)
+
 ## Overview
 
-The page has four sections, linked from a sticky nav bar that highlights the section in view:
+The page has four sections. A sticky nav bar links to **whoami**, **skills** and **projects** (highlighting the section in view), plus **Medium**, **GitHub** and **LinkedIn** in new tabs and the **Launch Mission** button. On phones it collapses into a hamburger menu.
 
-- **whoami**: name, role, intro, a short about paragraph and personal interests.
+- **whoami**: name and role (Cloud Engineer), then an about card that tells the story in my own words. It opens with "Hey there, welcome to my world!", compares the cloud to space (vast, always expanding, and only working when every system is built to survive the unknown), covers my curiosity about life beyond Earth and about AI and agentic systems, mentions hiking, adventure and books, and signs off with "So pull up a seat, look around, and explore. Mission control is open." Next to it sits a terminal card showing the output of `aws sts get-caller-identity`.
 - **skills**: a mission control status board over a real photo of Earth from orbit. All ten skills (AWS, Python, Terraform, Docker, Git, GitHub, Networking, Linux, Agentic AI and Technical writing) are visible at once as systems with a glowing status light, ending in ALL SYSTEMS: GO. When the board scrolls into view the lights run a quick systems check and come online one by one; with reduced motion they are simply on.
 - **projects**: flip cards with category filters (All, Cloud, Security, AI, Community). The GitHub button is on the front of every card.
 - **my socials**: LinkedIn, GitHub and Medium.
@@ -50,8 +52,14 @@ A counter shows breaches sealed, and the progress bar moves through **Launch Pad
 
 - HTML5, CSS3 (custom properties, grid, flexbox), vanilla JavaScript (ES5 compatible style)
 - Real NASA and JWST photos (public domain) for the hero, skills band, station scene and breaches
-- An SVG icon sprite
-- AWS Amplify Hosting for HTTPS, CDN and continuous deployment from GitHub
+- An SVG icon sprite and a space favicon (a planet with a keyhole and an orbit ring), with a PNG version for phone home screens
+- AWS Amplify Hosting for HTTPS, CDN and continuous deployment from GitHub: every push to `main` redeploys the site
+
+## Hosting notes
+
+- `customHttp.yml` sets security headers on every response (HSTS, a strict Content-Security-Policy, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy` and `Permissions-Policy`) and marks the page itself as `no-cache`, so visitors always get the latest deploy.
+- The CSS and JavaScript links in `index.html` end in a version tag such as `?v=20261105f`. Bump it after a change so browsers fetch the new files instead of a cached copy.
+- The site is fully static: no secrets, no backend and no cookies, so there is nothing sensitive in the frontend.
 
 ## File structure
 
@@ -61,55 +69,12 @@ css/style.css
 js/main.js        motion setting, nav, project cards and filters
 js/terminal.js    the bottom right mini terminal
 js/station.js     Mission: Secure the Station and its five mini-games
-assets/           icons.svg, favicon.svg, apple-touch-icon.png
+assets/           icons.svg, favicon.svg, apple-touch-icon.png (home screen icon)
 assets/photos/    NASA and JWST photos
 assets/audio/     the liftoff sound (MP3 and OGG)
-customHttp.yml    optional security headers for Amplify
+customHttp.yml    security and caching headers for Amplify
 README.md
 ```
-
-## Run locally
-
-From the project folder:
-
-```bash
-python3 -m http.server
-```
-
-Then open http://localhost:8000. A local server is needed (rather than opening the file directly) so the SVG icon sprite loads.
-
-## Deploy to AWS Amplify Hosting
-
-1. Push this folder to a GitHub repository.
-2. In the AWS console, open **AWS Amplify** and choose **Create new app**.
-3. Select **GitHub** as the source, authorize access to only this repository, and pick the branch (for example `main`).
-4. On the build settings page, Amplify detects that there is no framework. Leave the build command empty and set the output directory to the repository root (`/`). If it asks for a build spec, use:
-
-   ```yaml
-   version: 1
-   frontend:
-     phases:
-       build:
-         commands: []
-     artifacts:
-       baseDirectory: /
-       files:
-         - '**/*'
-   ```
-
-5. Choose **Save and deploy**. Amplify gives you an HTTPS URL on `amplifyapp.com`.
-6. Optional: add a custom domain under **Hosting, Custom domains**. Amplify issues and renews the certificate.
-7. Optional: security headers. Amplify reads `customHttp.yml` from the repo root. You can also paste the same headers into **Hosting, Custom headers** in the console.
-
-Every push to the connected branch triggers a new deployment.
-
-## Before you publish
-
-Search the project for `TODO` to find every placeholder, including:
-
-- the one-line intro and about paragraph
-- the project descriptions
-- the Broken Labs repository link
 
 ## Photo and sound credits
 
